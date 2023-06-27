@@ -33,8 +33,8 @@
 
       <section class="container mt-2">
         <h1 class="display-5 fw-bold text-uppercase text-secondary ms-3 mb-4">Les blocs de construction CSS</h1>
-        <div class="button-group">
-            <a href="themescss.html#selecteurs" class="btn btn-outline-dark">les selecteurs</a>
+        <div class="button-group m-5">
+            <a href="themescss.html#selecteurs" class="btn btn-outline-dark">les sélecteurs</a>
             <a href="themescss.html#pseudo-classes" class="btn btn-outline-dark">pseudo-classes</a>
             <a href="themescss.html#combinateurs" class="btn btn-outline-dark">combinateurs</a>
             <a href="themescss.html#cascade" class="btn btn-outline-dark">cascade, spécificité et héritage</a>
@@ -44,13 +44,52 @@
         </div>
       </section>
       <section class="container mt-2">
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3"><a href="#selecteurs" class="text-decoration-none">selecteurs</a></h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3"><a href="#pseudo-classes" class="text-decoration-none">pseudo-classes</a></h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3"><a href="#combinateurs" class="text-decoration-none">combinateurs</a></h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3"><a href="#cascade" class="text-decoration-none">cascade, spécificité et héritage</a></h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3"><a href="#boites" class="text-decoration-none">modèle de boîte</a></h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3"><a href="#bordures" class="text-decoration-none">arrière-plans et bordures</a></h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3"><a href="#taille-elements" class="text-decoration-none">taille des éléments</a></h2>
+        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3"><a href="#selecteurs" class="text-decoration-none">sélecteurs</a></h2>
+        <p>Dans CSS, les sélecteurs sont utilisés pour cibler les éléments HTML à mettre en forme dans nos pages web. CSS propose une grande diversité de sélecteurs, offrant ainsi une précision très fine dans la façon de cibler les éléments. Dans cette section, nous explorerons en détails le fonctionnement de ces différents types.</p>
+        <p>Un sélecteur est une expression qui indique au navigateur à quelle entité HTML s'applique la règle CSS correspondante. Le ou les éléments ciblés par le sélecteur sont le sujet de ce sélecteur.</p>
+        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">h1 </span> <span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span><span class="text-dark">: red;</span> <br>
+                <span class="text-danger ms-4">font-size</span><span class="text-dark">: 5em;</span> <br>        
+                <span class="text-warning">}</span>    
+            </code>
+        </div>
+        <p>En CSS, les sélecteurs sont définis dans la spécification CSS Selectors ; comme tout le reste de CSS, le bon fonctionnement des sélecteurs dépend de la prise en charge par les navigateurs. La plupart des sélecteurs que vous rencontrerez sont définis dans la spécification de niveau 3 pour les sélecteurs, une spécification mature, aussi la prise en charge par les navigateurs est excellente.</p>
+        <p>Quand un groupe de déclarations CSS s'applique à plusieurs éléments distincts, on peut combiner les sélecteurs individuels en une liste. Par exemple, si j'ai le même CSS pour un h1 et pour une classe .special, je pourrais écrire deux règles :</p>
+        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">h1 </span><span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>        
+                <span class="text-warning">}</span>
+                <br>
+                <br>
+                <span class="text-primary">.special </span><span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>
+                <span class="text-warning">}</span>
+            </code>
+        </div>
+        <p>ou bien une seule règle en combinant les sélecteurs, séparés par une virgule :</p>
+        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">h1, .special </span> <span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>      
+                <span class="text-warning">}</span>    
+            </code>
+        </div>
+        <h3 class="fs-4">Selecteurs par type, classe et ID</h3>
+        <p>Ce groupe inclut les sélecteurs ciblant les élements HTML tels que h1 :</p>
+        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+        <code>    
+            <span class="text-primary">h1 </span> <span class="text-warning">{ }</span><br> 
+        </code>
+        </div>
+        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3" id="#pseudo-classes">pseudo-classes</h2>
+        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3" id="#combinateurs">combinateurs</h2>
+        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3" id="#cascade">cascade, spécificité et héritage</h2>
+        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3" id="#boites">modèle de boîte</h2>
+        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3" id="#bordures">arrière-plans et bordures</h2>
+        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3" id="#taille-elements">taille des éléments</h2>
       </section>
 </body> 
 </html>
