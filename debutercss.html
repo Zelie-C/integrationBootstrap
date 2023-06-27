@@ -45,19 +45,35 @@
         <p>CSS est un langage basé sur des règles — on définit des règles de styles destinées à des éléments ou des groupes d'éléments particuliers dans la page. Par exemple, « Je veux que le titre principal de ma page s'affiche en rouge en gros caractères. »</p>
         <p>Dans le code suivant, une règle CSS élémentaire réalise cette mise en forme :</p>
 
-            <div class="w-50 border border-primary rounded-3 p-2 mb-3">
-                <code>
-                    <span class="text-primary">h1</span> <span class="text-warning">{</span><br>
-                    <span class="text-danger ms-4">color</span>: red; <br>
-                    <span class="text-danger ms-4">font-size</span>: 5em; <br>        
-                    <span class="text-warning">}</span>
-                </code>
-            </div>
-                <p>La règle commence par un sélecteur, l'élément HTML mis en forme. Ici, le style s'applique aux titres de niveau 1 (h1).
-                Suivent une paire d'accolades { } à l'intérieur desquelles on trouve une ou plusieurs déclarations, sous la forme d'une paire propriété: valeur.
-                Chaque paire précise une propriété de l'élément sélectionné, suivie de la valeur choisie pour cette propriété ; la propriété et la valeur sont séparées par deux points. 
-                Chaque déclaration se termine par un point-virgule. À chaque propriété définie par CSS correspondent différentes valeurs possibles. Dans l'exemple, la propriété color peut prendre différentes valeurs de type color. 
-                La propriété font-size accepte différentes tailles comme valeurs.</p>
+        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">h1</span> <span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span>: red; <br>
+                <span class="text-danger ms-4">font-size</span>: 5em; <br>        
+                <span class="text-warning">}</span>    
+            </code>
+        </div>
+        
+        <p>La règle commence par un sélecteur, l'élément HTML mis en forme. Ici, le style s'applique aux titres de niveau 1 (h1).
+        Suivent une paire d'accolades { } à l'intérieur desquelles on trouve une ou plusieurs déclarations, sous la forme d'une paire propriété: valeur.
+        Chaque paire précise une propriété de l'élément sélectionné, suivie de la valeur choisie pour cette propriété ; la propriété et la valeur sont séparées par deux points. 
+        Chaque déclaration se termine par un point-virgule. À chaque propriété définie par CSS correspondent différentes valeurs possibles. Dans l'exemple, la propriété color peut prendre différentes valeurs de type color. 
+        La propriété font-size accepte différentes tailles comme valeurs.</p>
+        <p>Une feuille de style CSS est constituée d'une succession de telles règles :</p>
+        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">h1</span><span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span>: red; <br>
+                <span class="text-danger ms-4">font-size</span>: 5em; <br>        
+                <span class="text-warning">}</span>
+                <br>
+                <br>
+                <span class="text-primary">p</span><span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span>: black; <br>
+                <span class="text-warning">}</span>
+            </code>
+        </div>
+            
       </section>
 </body>
 </html>
