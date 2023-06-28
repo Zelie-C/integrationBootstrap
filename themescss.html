@@ -11,30 +11,30 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-light mb-4">
         <div class="container-fluid">
-          <a class="navbar-brand text-uppercase text-primary" href="#">CSS</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand text-uppercase text-primary" href="#">CSS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link text-uppercase" aria-current="page" href="index.html">Accueil</a>
-              <a class="nav-link text-uppercase" href="debutercss.html">Débuter</a>
-              <a class="nav-link active text-uppercase link-primary" href="themescss.html">Thématiques</a>
-              <a class="nav-link text-uppercase" href="abecedairecss.html">Abécédaire</a>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link text-uppercase" aria-current="page" href="index.html">Accueil</a>
+                    <a class="nav-link text-uppercase" href="debutercss.html">Débuter</a>
+                    <a class="nav-link active text-uppercase link-primary" href="themescss.html">Thématiques</a>
+                    <a class="nav-link text-uppercase" href="abecedairecss.html">Abécédaire</a>
+                </div>
+                <div class="navbar-nav">
+                    <a href="#" class="btn btn-outline-dark m-1">MDN Webs Docs</a>
+                    <a href="#" class="btn btn-outline-dark m-1">MDN Webs Docs</a>
+                    <a href="#" class="btn btn-outline-dark m-1">MDN Webs Docs</a>
+                </div>
             </div>
-            <div class="navbar-nav">
-                <a href="#" class="btn btn-outline-dark m-1">MDN Webs Docs</a>
-                <a href="#" class="btn btn-outline-dark m-1">MDN Webs Docs</a>
-                <a href="#" class="btn btn-outline-dark m-1">MDN Webs Docs</a>
-            </div>
-          </div>
         </div>
-      </nav>
+    </nav>
 
-      <section class="container mt-2">
+    <section class="container mt-2">
         <h1 class="display-5 fw-bold text-uppercase text-secondary ms-3 mb-4">Les blocs de construction CSS</h1>
         <div class="button-group m-5">
-            <a href="themescss.html#selecteurs" class="btn btn-outline-dark">les sélecteurs</a>
+            <a href="#selecteurs" class="btn btn-outline-dark">les sélecteurs</a>
             <a href="themescss.html#pseudo-classes" class="btn btn-outline-dark">pseudo-classes</a>
             <a href="themescss.html#combinateurs" class="btn btn-outline-dark">combinateurs</a>
             <a href="themescss.html#cascade" class="btn btn-outline-dark">cascade, spécificité et héritage</a>
@@ -42,9 +42,9 @@
             <a href="themescss.html#bordures" class="btn btn-outline-dark">arrière-plans et bordures</a>
             <a href="themescss.html#taille-elements" class="btn btn-outline-dark">taille des éléments</a>
         </div>
-      </section>
-      <section class="container mt-2">
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3"><a href="#selecteurs" class="text-decoration-none">sélecteurs</a></h2>
+    </section>
+    <section class="container mt-2">
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="#selecteurs">sélecteurs</h2>
         <p>Dans CSS, les sélecteurs sont utilisés pour cibler les éléments HTML à mettre en forme dans nos pages web. CSS propose une grande diversité de sélecteurs, offrant ainsi une précision très fine dans la façon de cibler les éléments. Dans cette section, nous explorerons en détails le fonctionnement de ces différents types.</p>
         <p>Un sélecteur est une expression qui indique au navigateur à quelle entité HTML s'applique la règle CSS correspondante. Le ou les éléments ciblés par le sélecteur sont le sujet de ce sélecteur.</p>
         <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
@@ -77,19 +77,65 @@
                 <span class="text-warning">}</span>    
             </code>
         </div>
-        <h3 class="fs-4">Selecteurs par type, classe et ID</h3>
+        <h3 class="fs-4 mt-4">Selecteurs par type, classe et ID</h3>
         <p>Ce groupe inclut les sélecteurs ciblant les élements HTML tels que h1 :</p>
         <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
         <code>    
             <span class="text-primary">h1 </span> <span class="text-warning">{ }</span><br> 
         </code>
         </div>
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3" id="#pseudo-classes">pseudo-classes</h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3" id="#combinateurs">combinateurs</h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3" id="#cascade">cascade, spécificité et héritage</h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3" id="#boites">modèle de boîte</h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3" id="#bordures">arrière-plans et bordures</h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 mb-3" id="#taille-elements">taille des éléments</h2>
-      </section>
+        <p>On trouve aussi les sélecteurs ciblant une classe :</p>
+        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">.box </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+        <p>ou un ID :</p>
+        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">#unique </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+        <h3 class="fs-4 mt-4">Selecteur d'attributs</h3>
+        <p>Ce groupe de sélecteurs offre différents mécanismes pour cibler des éléments en fonction de la présence d'un attribut donné pour un élément donné :</p>
+        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">a[title] </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+        <p>Ou même de baser la sélection sur la présence d'un attribut avec une valeur bien précise :</p>
+        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">a[href="https://example.com"] </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="pseudo-classes">pseudo-classes</h2>
+        <p>Ce groupe de sélecteurs inclut les pseudo-classes, qui ciblent des éléments dans un état donné. Par exemple, la pseudo-classe :hover sélectionne un élément seulement s'il est survolé par le pointeur de la souris :</p>
+        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">a:hover </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+        <p>Ce groupe inclut aussi les pseudo-éléments, qui ciblent une certaine partie d'un élément plutôt que l'élément tout entier. Par exemple, ::first-line sélectionne la première ligne d'un texte contenu dans un élément (un p dans l'exemple ci-dessous), comme si la première ligne du texte mis en forme était placée entre span et qu'après coup on appliquait un style sur cet élément.</p>
+        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">p::first-line </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="combinateurs">combinateurs</h2>
+        <p>Dans la dernière catégorie, on combine les sélecteurs pour cibler plus finement les éléments dans nos documents. L'exemple suivant sélectionne les paragraphes enfants directs de article grâce au combinateur enfant (>) :</p>
+        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">article > p </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="cascade">cascade, spécificité et héritage</h2>
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="boites">modèle de boîte</h2>
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="bordures">arrière-plans et bordures</h2>
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="taille-elements">taille des éléments</h2>
+    </section>
 </body> 
 </html>
