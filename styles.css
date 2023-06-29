@@ -7,6 +7,7 @@ li > a {
     color: inherit;
 }
 
+/* tirets avant liste */
 .hyphen::before {
     content: "- ";
 }
@@ -15,6 +16,7 @@ li > a {
     text-align: justify;
 }
 
+/* Scrollbar latérale colonne gauche*/
 html, body, .row {
     height: 100%;
 }
