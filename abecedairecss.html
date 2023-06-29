@@ -152,7 +152,7 @@
         </section>
         <section class="col h-100 overflow-auto">
             <section class="propriete ms-4 pt-4">
-                <h1 class="text-secondary">accent-color</h1>
+                <h1 class="text-secondary" id="accent-color">accent-color</h1>
                 <p class="col-10">La propriété CSS accent-color définit la couleur d'accentuation (accent) des éléments. Une accentuation est présente sur des éléments HTML tels que des &lt;input&gt; de type checkbox ou radio.</p>
 
                 <div class="row">
@@ -180,47 +180,138 @@
                     <div class="col-6">
                         <h3 class="text-secondary text-uppercase fs-4 p-2 ms-4 mb-3">Valeurs</h3>
                         <ul class="me-4 d-flex flex-column justify-content-evenly">
-                            <li class="hyphen"><span class="bg-info rounded-1">auto</span> : Représente une couleur déterminée par l'agent utilisateur, qui devrait correspondre à la couleur d'accentuation de la plateforme, s'il y en a une.</li>
-                            <li class="hyphen"><span class="bg-info rounded-1">&lt;color&gt;</span> : Spécifie la couleur à utiliser en tant que couleur d'accentuation.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">auto</span> : Représente une couleur déterminée par l'agent utilisateur, qui devrait correspondre à la couleur d'accentuation de la plateforme, s'il y en a une.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">&lt;color&gt;</span> : Spécifie la couleur à utiliser en tant que couleur d'accentuation.</li>
                         </ul>
                     </div>
                     </div>
             </section>
 
             <section class="propriete ms-4 pt-4">
-                <h1 class="text-secondary">accent-color</h1>
-                <p class="col-10">La propriété CSS accent-color définit la couleur d'accentuation (accent) des éléments. Une accentuation est présente sur des éléments HTML tels que des &lt;input&gt; de type checkbox ou radio.</p>
+                <h1 class="text-secondary" id="align">align</h1>
+                <h2 class="ps-3 text-secondary">-content</h2>
+                <p class="col-10">La propriété CSS align-content définit la façon dont l'espace est réparti entre et autour des éléments le long de l'axe en bloc du conteneur (c'est-à-dire l'axe orthogonal à l'axe d'écriture) lorsque celui-ci est un conteneur de boîte flexible et le long de l'axe principal lorsque le conteneur est une grille.</p>
 
                 <div class="row">
                     <div class="col-6">
                         <h3 class="text-secondary text-uppercase fs-4 p-2 ms-4 mb-3">Syntaxe</h3>
                         <div class=" bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
                             <code>    
-                                <span class="text-secondary">/* Valeurs avec un mot-clé */</span><br>
-                                <span class="text-danger">accent-color: </span> <span class="text-dark">auto;</span><br>
+                                <span class="text-secondary">/* Alignement le long de l'axe */</span><br>
+                                <span class="text-secondary">/* Note : align-content ne prend pas en charge les valeurs left et right */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">center;</span><span class="text-secondary">/* Les éléments sont groupés au centre */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">start;</span><span class="text-secondary">/* Les éléments sont groupés au début  */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">end;</span><span class="text-secondary">/* Les éléments sont groupés à la fin */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">flex-start;</span><span class="text-secondary">/* Les éléments flexibles sont groupés au début */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">flex-end;</span><span class="text-secondary">/* Les éléments flexibles sont groupés à la fin */</span><br>
                                 <br>
-                                <span class="text-secondary">/* Valeurs de &lt;color&gt; */</span><br>
-                                <span class="text-danger">accent-color: </span> <span class="text-dark">red;</span><br>
-                                <span class="text-danger">accent-color: </span> <span class="text-dark">#5729e9;</span><br>
-                                <span class="text-danger">accent-color: </span> <span class="text-dark">rgb(0, 200, 0);</span><br>
-                                <span class="text-danger">accent-color: </span> <span class="text-dark">hsl(228, 4%, 24%);</span><br>
+                                <span class="text-secondary">/* Alignement normal */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">normal;</span><br>
+                                <br>
+                                <span class="text-secondary">/* Alignement sur la ligne de base */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">baseline;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">first baseline;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">last baseline;</span><br>
+                                <br>
+                                <span class="text-secondary">/* Répartition de l'espace */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">space-between;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">space-around;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">space-evenly;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">stretch;</span><br>
+                                <br>
+                                <span class="text-secondary">/* Gestion du dépassement */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">safe center;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">unsafe center;</span><br>
                                 <br>
                                 <span class="text-secondary">/* Valeurs globales */</span><br>
-                                <span class="text-danger">accent-color: </span> <span class="text-dark">inherit;</span><br>
-                                <span class="text-danger">accent-color: </span> <span class="text-dark">initial;</span><br>
-                                <span class="text-danger">accent-color: </span> <span class="text-dark">revert;</span><br>
-                                <span class="text-danger">accent-color: </span> <span class="text-dark">unset;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">inherit;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">initial;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">unset;</span><br>
                             </code>
                             </div>
                     </div>
                     <div class="col-6">
                         <h3 class="text-secondary text-uppercase fs-4 p-2 ms-4 mb-3">Valeurs</h3>
                         <ul class="me-4 d-flex flex-column justify-content-evenly">
-                            <li class="hyphen"><span class="bg-info rounded-1">auto</span> : Représente une couleur déterminée par l'agent utilisateur, qui devrait correspondre à la couleur d'accentuation de la plateforme, s'il y en a une.</li>
-                            <li class="hyphen"><span class="bg-info rounded-1">&lt;color&gt;</span> : Spécifie la couleur à utiliser en tant que couleur d'accentuation.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">start</span> : Les éléments sont regroupés vers le bord au début de l'axe de bloc.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">end</span> : Les éléments sont regroupés vers le bord à la fin de l'axe de bloc.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">flex-start</span> : Les éléments flexibles sont regroupés vers le bord au début de l'axe de bloc. Cette valeur ne s'applique qu'aux éléments fils d'un conteneur flexible, sinon elle est synonyme de start.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">flex-end</span> : Les éléments flexibles sont regroupés vers le bord au début de l'axe de bloc. Cette valeur ne s'applique qu'aux éléments fils d'un conteneur flexible, sinon elle est synonyme de end.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">center</span> : Les éléments sont regroupés au centre de l'axe de bloc.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">normal</span> : Les éléments sont groupés sur leur position par défaut, comme si align-content n'avait pas été défini.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">baseline </span><span class="border border-info rounded-1 p-1 ms-1">first baseline </span><span class="border border-info rounded-1 p-1 ms-1">last baseline </span> : Ces valeurs permettent de définir l'alignement par rapport à la ligne de base pour l'élément du conteneur avec la ligne de base la plus haute ou la plus basse. Si first baseline n'est pas prise en charge, la valeur correspondra à start, si last baseline n'est pas prise en charge, la valeur correspondra à end.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">space-between</span> : Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, le premier élément est aligné sur le bord au début du conteneur et le dernier élément est aligné sur le bord à la fin du conteneur.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">space-around</span> : Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, la moitié de cet espace est utilisée entre le premier élément et le bord au début du conteneur et la moitié de cet espace est utilisée entre le dernier élément et le bord à la fin du conteneur</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">space-evenly</span> : Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, entre le premier élément et le bord du conteneur et entre le dernier élément et le bord du conteneur.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">stretch</span> : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe en bloc, les éléments dimensionnés automatiquement seront élargis de la même longueur tout en respectant les contraintes imposées par max-height/max-width (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">safe</span> : Ce mot-clé est utilisé avec un mot-clé pour l'alignement. Si l'élément dépasse du conteneur avec la valeur d'alignement indiquée, l'élément sera alors aligné avec la valeur start.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">unsafe</span> : Ce mot-clé est utilisé avec un mot-clé pour l'alignement. Quelle que soit la taille et le dépassement éventuellement occasionné, l'élément est aligné avec la valeur indiquée.</li>
                         </ul>
                     </div>
+                </div>
+                <h2 class="ps-3 text-secondary">-items</h2>
+                <p class="col-10">La propriété CSS align-items définit la valeur de align-self sur l'ensemble des éléments-fils directs.
+                La propriété align-self définit elle l'alignement d'un objet au sein de son conteneur. Pour les boîtes flexibles, cette propriété contrôle l'alignement par rapport à l'axe secondaire (cross axis). Au sein d'une grille CSS, elle contrôle l'alignement des éléments sur l'axe de bloc de la zone de grille correspondante.</p>
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="text-secondary text-uppercase fs-4 p-2 ms-4 mb-3">Syntaxe</h3>
+                        <div class=" bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+                            <code>
+                                <span class="text-secondary">/* Mots-clefs de base */</span><br>
+                                <span class="text-danger">align-items: </span> <span class="text-dark">normal;</span><br>
+                                <span class="text-danger">align-items: </span> <span class="text-dark">stretch;</span><br>
+                                <br>  
+                                <span class="text-secondary">/* Alignement le long de l'axe */</span><br>
+                                <span class="text-secondary">/* Note : align-content ne prend pas en charge les valeurs left et right */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">center;</span><span class="text-secondary">/* Les éléments sont groupés au centre */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">start;</span><span class="text-secondary">/* Les éléments sont groupés au début  */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">end;</span><span class="text-secondary">/* Les éléments sont groupés à la fin */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">flex-start;</span><span class="text-secondary">/* Les éléments flexibles sont groupés au début */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">flex-end;</span><span class="text-secondary">/* Les éléments flexibles sont groupés à la fin */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">self-start;</span><span class="text-secondary">/* Les éléments flexibles sont groupés à la fin */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">self-end;</span><span class="text-secondary">/* Les éléments flexibles sont groupés à la fin */</span><br>
+                                <br>
+                                <span class="text-secondary">/* Alignement sur la ligne de base */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">baseline;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">first baseline;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">last baseline;</span><br>
+                                <br>
+                                <span class="text-secondary">/* Répartition de l'espace */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">space-between;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">space-around;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">space-evenly;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">stretch;</span><br>
+                                <br>
+                                <span class="text-secondary">/* Gestion du dépassement */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">safe center;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">unsafe center;</span><br>
+                                <br>
+                                <span class="text-secondary">/* Valeurs globales */</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">inherit;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">initial;</span><br>
+                                <span class="text-danger">align-content: </span> <span class="text-dark">unset;</span><br>
+                            </code>
+                            </div>
                     </div>
+                    <div class="col-6">
+                        <h3 class="text-secondary text-uppercase fs-4 p-2 ms-4 mb-3">Valeurs</h3>
+                        <ul class="me-4 d-flex flex-column justify-content-evenly">
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">start</span> : Les éléments sont regroupés vers le bord au début de l'axe de bloc.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">end</span> : Les éléments sont regroupés vers le bord à la fin de l'axe de bloc.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">flex-start</span> : Les éléments flexibles sont regroupés vers le bord au début de l'axe de bloc. Cette valeur ne s'applique qu'aux éléments fils d'un conteneur flexible, sinon elle est synonyme de start.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">flex-end</span> : Les éléments flexibles sont regroupés vers le bord au début de l'axe de bloc. Cette valeur ne s'applique qu'aux éléments fils d'un conteneur flexible, sinon elle est synonyme de end.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">center</span> : Les éléments sont regroupés au centre de l'axe de bloc.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">normal</span> : Les éléments sont groupés sur leur position par défaut, comme si align-content n'avait pas été défini.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">baseline </span><span class="border border-info rounded-1 p-1 ms-1">first baseline </span><span class="border border-info rounded-1 p-1 ms-1">last baseline </span> : Ces valeurs permettent de définir l'alignement par rapport à la ligne de base pour l'élément du conteneur avec la ligne de base la plus haute ou la plus basse. Si first baseline n'est pas prise en charge, la valeur correspondra à start, si last baseline n'est pas prise en charge, la valeur correspondra à end.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">space-between</span> : Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, le premier élément est aligné sur le bord au début du conteneur et le dernier élément est aligné sur le bord à la fin du conteneur.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">space-around</span> : Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, la moitié de cet espace est utilisée entre le premier élément et le bord au début du conteneur et la moitié de cet espace est utilisée entre le dernier élément et le bord à la fin du conteneur</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">space-evenly</span> : Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, entre le premier élément et le bord du conteneur et entre le dernier élément et le bord du conteneur.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">stretch</span> : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe en bloc, les éléments dimensionnés automatiquement seront élargis de la même longueur tout en respectant les contraintes imposées par max-height/max-width (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">safe</span> : Ce mot-clé est utilisé avec un mot-clé pour l'alignement. Si l'élément dépasse du conteneur avec la valeur d'alignement indiquée, l'élément sera alors aligné avec la valeur start.</li>
+                            <li class="hyphen mb-1"><span class="border border-info rounded-1 p-1">unsafe</span> : Ce mot-clé est utilisé avec un mot-clé pour l'alignement. Quelle que soit la taille et le dépassement éventuellement occasionné, l'élément est aligné avec la valeur indiquée.</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
         </section>
     </div>

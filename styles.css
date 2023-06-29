@@ -7,6 +7,10 @@ li > a {
     color: inherit;
 }
 
+li > a:hover {
+    font-weight: bold;
+}
+
 /* tirets avant liste */
 .hyphen::before {
     content: "- ";
