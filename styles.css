@@ -17,11 +17,14 @@ li > a {
 }
 
 /* Scrollbar latérale colonne gauche*/
-html, body, .row,  .container-fluid {
-    height: 100%;
+.navbar {
+    height: 10%;
+}
+
+.container-90 {
+    height: 90%;
 }
 
 .prop-list {
-    height: 100%;
     overflow-y: scroll;
 }
