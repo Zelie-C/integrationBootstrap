@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="reset.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light mb-4">
+    <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand text-uppercase text-primary" href="#">CSS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@
 
     <div class="row">
         <section class="prop-list col-3">
-            <h1 class="fs-5 ps-3 mb-3">Liste des propriétés</h1>
+            <h1 class="fs-5 ps-3 pt-4 mb-3">Liste des propriétés</h1>
             <ul>
                 <li><a href="#">accent-color</a></li>
                 <li><a href="#">align-*</a></li>
@@ -152,7 +152,77 @@
             </ul>
         </section>
         <section class="col">
+            <section class="propriete ms-4 pt-4">
+                <h1 class="text-secondary">accent-color</h1>
+                <p class="col-10">La propriété CSS accent-color définit la couleur d'accentuation (accent) des éléments. Une accentuation est présente sur des éléments HTML tels que des &lt;input&gt; de type checkbox ou radio.</p>
 
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="text-secondary text-uppercase fs-4 p-2 ms-4 mb-3">Syntaxe</h3>
+                        <div class=" bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+                            <code>    
+                                <span class="text-secondary">/* Valeurs avec un mot-clé */</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">auto;</span><br>
+                                <br>
+                                <span class="text-secondary">/* Valeurs de &lt;color&gt; */</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">red;</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">#5729e9;</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">rgb(0, 200, 0);</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">hsl(228, 4%, 24%);</span><br>
+                                <br>
+                                <span class="text-secondary">/* Valeurs globales */</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">inherit;</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">initial;</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">revert;</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">unset;</span><br>
+                            </code>
+                            </div>
+                    </div>
+                    <div class="col-6">
+                        <h3 class="text-secondary text-uppercase fs-4 p-2 ms-4 mb-3">Valeurs</h3>
+                        <ul class="me-4 d-flex flex-column justify-content-evenly">
+                            <li class="hyphen"><span class="bg-info rounded-1">auto</span> : Représente une couleur déterminée par l'agent utilisateur, qui devrait correspondre à la couleur d'accentuation de la plateforme, s'il y en a une.</li>
+                            <li class="hyphen"><span class="bg-info rounded-1">&lt;color&gt;</span> : Spécifie la couleur à utiliser en tant que couleur d'accentuation.</li>
+                        </ul>
+                    </div>
+                    </div>
+            </section>
+
+            <section class="propriete ms-4 pt-4">
+                <h1 class="text-secondary">accent-color</h1>
+                <p class="col-10">La propriété CSS accent-color définit la couleur d'accentuation (accent) des éléments. Une accentuation est présente sur des éléments HTML tels que des &lt;input&gt; de type checkbox ou radio.</p>
+
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="text-secondary text-uppercase fs-4 p-2 ms-4 mb-3">Syntaxe</h3>
+                        <div class=" bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+                            <code>    
+                                <span class="text-secondary">/* Valeurs avec un mot-clé */</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">auto;</span><br>
+                                <br>
+                                <span class="text-secondary">/* Valeurs de &lt;color&gt; */</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">red;</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">#5729e9;</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">rgb(0, 200, 0);</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">hsl(228, 4%, 24%);</span><br>
+                                <br>
+                                <span class="text-secondary">/* Valeurs globales */</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">inherit;</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">initial;</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">revert;</span><br>
+                                <span class="text-danger">accent-color: </span> <span class="text-dark">unset;</span><br>
+                            </code>
+                            </div>
+                    </div>
+                    <div class="col-6">
+                        <h3 class="text-secondary text-uppercase fs-4 p-2 ms-4 mb-3">Valeurs</h3>
+                        <ul class="me-4 d-flex flex-column justify-content-evenly">
+                            <li class="hyphen"><span class="bg-info rounded-1">auto</span> : Représente une couleur déterminée par l'agent utilisateur, qui devrait correspondre à la couleur d'accentuation de la plateforme, s'il y en a une.</li>
+                            <li class="hyphen"><span class="bg-info rounded-1">&lt;color&gt;</span> : Spécifie la couleur à utiliser en tant que couleur d'accentuation.</li>
+                        </ul>
+                    </div>
+                    </div>
+            </section>
         </section>
     </div>
 </body>

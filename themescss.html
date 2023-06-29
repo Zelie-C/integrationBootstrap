@@ -47,7 +47,7 @@
         <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="#selecteurs">sélecteurs</h2>
         <p>Dans CSS, les sélecteurs sont utilisés pour cibler les éléments HTML à mettre en forme dans nos pages web. CSS propose une grande diversité de sélecteurs, offrant ainsi une précision très fine dans la façon de cibler les éléments. Dans cette section, nous explorerons en détails le fonctionnement de ces différents types.</p>
         <p>Un sélecteur est une expression qui indique au navigateur à quelle entité HTML s'applique la règle CSS correspondante. Le ou les éléments ciblés par le sélecteur sont le sujet de ce sélecteur.</p>
-        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
             <code>    
                 <span class="text-primary">h1 </span> <span class="text-warning">{</span><br>
                 <span class="text-danger ms-4">color</span><span class="text-dark">: red;</span> <br>
@@ -57,7 +57,7 @@
         </div>
         <p>En CSS, les sélecteurs sont définis dans la spécification CSS Selectors ; comme tout le reste de CSS, le bon fonctionnement des sélecteurs dépend de la prise en charge par les navigateurs. La plupart des sélecteurs que vous rencontrerez sont définis dans la spécification de niveau 3 pour les sélecteurs, une spécification mature, aussi la prise en charge par les navigateurs est excellente.</p>
         <p>Quand un groupe de déclarations CSS s'applique à plusieurs éléments distincts, on peut combiner les sélecteurs individuels en une liste. Par exemple, si j'ai le même CSS pour un h1 et pour une classe .special, je pourrais écrire deux règles :</p>
-        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
             <code>    
                 <span class="text-primary">h1 </span><span class="text-warning">{</span><br>
                 <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>        
@@ -70,7 +70,7 @@
             </code>
         </div>
         <p>ou bien une seule règle en combinant les sélecteurs, séparés par une virgule :</p>
-        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
             <code>    
                 <span class="text-primary">h1, .special </span> <span class="text-warning">{</span><br>
                 <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>      
@@ -79,32 +79,32 @@
         </div>
         <h3 class="fs-4 mt-4">Selecteurs par type, classe et ID</h3>
         <p>Ce groupe inclut les sélecteurs ciblant les élements HTML tels que h1 :</p>
-        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
         <code>    
             <span class="text-primary">h1 </span> <span class="text-warning">{ }</span><br> 
         </code>
         </div>
         <p>On trouve aussi les sélecteurs ciblant une classe :</p>
-        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
             <code>    
                 <span class="text-primary">.box </span> <span class="text-warning">{ }</span><br> 
             </code>
         </div>
         <p>ou un ID :</p>
-        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
             <code>    
                 <span class="text-primary">#unique </span> <span class="text-warning">{ }</span><br> 
             </code>
         </div>
         <h3 class="fs-4 mt-4">Selecteur d'attributs</h3>
         <p>Ce groupe de sélecteurs offre différents mécanismes pour cibler des éléments en fonction de la présence d'un attribut donné pour un élément donné :</p>
-        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
             <code>    
                 <span class="text-primary">a[title] </span> <span class="text-warning">{ }</span><br> 
             </code>
         </div>
         <p>Ou même de baser la sélection sur la présence d'un attribut avec une valeur bien précise :</p>
-        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
             <code>    
                 <span class="text-primary">a[href="https://example.com"] </span> <span class="text-warning">{ }</span><br> 
             </code>
@@ -112,13 +112,13 @@
 
         <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="pseudo-classes">pseudo-classes</h2>
         <p>Ce groupe de sélecteurs inclut les pseudo-classes, qui ciblent des éléments dans un état donné. Par exemple, la pseudo-classe :hover sélectionne un élément seulement s'il est survolé par le pointeur de la souris :</p>
-        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
             <code>    
                 <span class="text-primary">a:hover </span> <span class="text-warning">{ }</span><br> 
             </code>
         </div>
         <p>Ce groupe inclut aussi les pseudo-éléments, qui ciblent une certaine partie d'un élément plutôt que l'élément tout entier. Par exemple, ::first-line sélectionne la première ligne d'un texte contenu dans un élément (un p dans l'exemple ci-dessous), comme si la première ligne du texte mis en forme était placée entre span et qu'après coup on appliquait un style sur cet élément.</p>
-        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
             <code>    
                 <span class="text-primary">p::first-line </span> <span class="text-warning">{ }</span><br> 
             </code>
@@ -126,7 +126,7 @@
 
         <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="combinateurs">combinateurs</h2>
         <p>Dans la dernière catégorie, on combine les sélecteurs pour cibler plus finement les éléments dans nos documents. L'exemple suivant sélectionne les paragraphes enfants directs de article grâce au combinateur enfant (>) :</p>
-        <div class="w-25 border border-primary rounded-3 p-2 ms-4 mb-3">
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
             <code>    
                 <span class="text-primary">article > p </span> <span class="text-warning">{ }</span><br> 
             </code>
