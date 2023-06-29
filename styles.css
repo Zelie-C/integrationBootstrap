@@ -16,15 +16,3 @@ li > a {
     text-align: justify;
 }
 
-/* Scrollbar latérale colonne gauche*/
-.navbar {
-    height: 10%;
-}
-
-.container-90 {
-    height: 90%;
-}
-
-.prop-list {
-    overflow-y: scroll;
-}

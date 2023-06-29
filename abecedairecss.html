@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html class="h-100" lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="reset.css">
 </head>
-<body class="h-100">
+<body class="h-100 d-flex flex-column align-content-stretch">
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand text-uppercase text-primary" href="#">CSS</a>
@@ -29,9 +29,9 @@
             </div>
         </div>
     </nav>
-    <section class="container-fluid container-90">
+    <section class="container-fluid h-100 overflow-hidden">
     <div class="row h-100">
-        <section class="col-3 h-100 prop-list">
+        <section class="h-100 overflow-auto col-3">
             <h1 class="fs-5 ps-3 pt-4 mb-3">Liste des propriétés</h1>
             <ul>
                 <li><a href="#">accent-color</a></li>
@@ -150,7 +150,7 @@
                 <li><a href="#">zoom</a></li>
             </ul>
         </section>
-        <section class="col h-100 overflow-scroll">
+        <section class="col h-100 overflow-auto">
             <section class="propriete ms-4 pt-4">
                 <h1 class="text-secondary">accent-color</h1>
                 <p class="col-10">La propriété CSS accent-color définit la couleur d'accentuation (accent) des éléments. Une accentuation est présente sur des éléments HTML tels que des &lt;input&gt; de type checkbox ou radio.</p>
