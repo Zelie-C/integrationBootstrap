@@ -31,110 +31,76 @@
     </nav>
 
     <section class="container mt-2">
-        <h1 class="display-5 fw-bold text-uppercase text-secondary ms-3 mb-4">Les blocs de construction CSS</h1>
+        <h1 class="display-5 fw-bold text-uppercase text-secondary ms-3 mb-4">Thématiques</h1>
         <div class="button-group m-5">
-            <a href="#selecteurs" class="btn btn-outline-dark">les sélecteurs</a>
-            <a href="themescss.html#pseudo-classes" class="btn btn-outline-dark">pseudo-classes</a>
-            <a href="themescss.html#combinateurs" class="btn btn-outline-dark">combinateurs</a>
-            <a href="themescss.html#cascade" class="btn btn-outline-dark">cascade, spécificité et héritage</a>
-            <a href="themescss.html#boites" class="btn btn-outline-dark">modèle de boîte</a>
-            <a href="themescss.html#bordures" class="btn btn-outline-dark">arrière-plans et bordures</a>
-            <a href="themescss.html#taille-elements" class="btn btn-outline-dark">taille des éléments</a>
+            <a href="themescss.html#flexbox" class="btn btn-outline-warning mb-2">Flexbox</a>
+            <a href="themescss.html#grid-content" class="btn btn-outline-warning mb-2">CSS Grid</a>
+            <a href="themescss.html#animations" class="btn btn-outline-warning mb-2">Les animations en CSS</a>
+            <a href="themescss.html#framework" class="btn btn-outline-warning mb-2">Frameworks CSS</a>
         </div>
     </section>
     <section class="container mt-2">
-        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="#selecteurs">sélecteurs</h2>
-        <p>Dans CSS, les sélecteurs sont utilisés pour cibler les éléments HTML à mettre en forme dans nos pages web. CSS propose une grande diversité de sélecteurs, offrant ainsi une précision très fine dans la façon de cibler les éléments. Dans cette section, nous explorerons en détails le fonctionnement de ces différents types.</p>
-        <p>Un sélecteur est une expression qui indique au navigateur à quelle entité HTML s'applique la règle CSS correspondante. Le ou les éléments ciblés par le sélecteur sont le sujet de ce sélecteur.</p>
-        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
-            <code>    
-                <span class="text-primary">h1 </span> <span class="text-warning">{</span><br>
-                <span class="text-danger ms-4">color</span><span class="text-dark">: red;</span> <br>
-                <span class="text-danger ms-4">font-size</span><span class="text-dark">: 5em;</span> <br>        
-                <span class="text-warning">}</span>    
-            </code>
-        </div>
-        <p>En CSS, les sélecteurs sont définis dans la spécification CSS Selectors ; comme tout le reste de CSS, le bon fonctionnement des sélecteurs dépend de la prise en charge par les navigateurs. La plupart des sélecteurs que vous rencontrerez sont définis dans la spécification de niveau 3 pour les sélecteurs, une spécification mature, aussi la prise en charge par les navigateurs est excellente.</p>
-        <p>Quand un groupe de déclarations CSS s'applique à plusieurs éléments distincts, on peut combiner les sélecteurs individuels en une liste. Par exemple, si j'ai le même CSS pour un h1 et pour une classe .special, je pourrais écrire deux règles :</p>
-        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
-            <code>    
-                <span class="text-primary">h1 </span><span class="text-warning">{</span><br>
-                <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>        
-                <span class="text-warning">}</span>
-                <br>
-                <br>
-                <span class="text-primary">.special </span><span class="text-warning">{</span><br>
-                <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>
-                <span class="text-warning">}</span>
-            </code>
-        </div>
-        <p>ou bien une seule règle en combinant les sélecteurs, séparés par une virgule :</p>
-        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
-            <code>    
-                <span class="text-primary">h1, .special </span> <span class="text-warning">{</span><br>
-                <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>      
-                <span class="text-warning">}</span>    
-            </code>
-        </div>
-        <h3 class="fs-4 mt-4">Selecteurs par type, classe et ID</h3>
-        <p>Ce groupe inclut les sélecteurs ciblant les élements HTML tels que h1 :</p>
-        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
-        <code>    
-            <span class="text-primary">h1 </span> <span class="text-warning">{ }</span><br> 
-        </code>
-        </div>
-        <p>On trouve aussi les sélecteurs ciblant une classe :</p>
-        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
-            <code>    
-                <span class="text-primary">.box </span> <span class="text-warning">{ }</span><br> 
-            </code>
-        </div>
-        <p>ou un ID :</p>
-        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
-            <code>    
-                <span class="text-primary">#unique </span> <span class="text-warning">{ }</span><br> 
-            </code>
-        </div>
-        <h3 class="fs-4 mt-4">Selecteur d'attributs</h3>
-        <p>Ce groupe de sélecteurs offre différents mécanismes pour cibler des éléments en fonction de la présence d'un attribut donné pour un élément donné :</p>
-        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
-            <code>    
-                <span class="text-primary">a[title] </span> <span class="text-warning">{ }</span><br> 
-            </code>
-        </div>
-        <p>Ou même de baser la sélection sur la présence d'un attribut avec une valeur bien précise :</p>
-        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
-            <code>    
-                <span class="text-primary">a[href="https://example.com"] </span> <span class="text-warning">{ }</span><br> 
-            </code>
-        </div>
 
-        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="pseudo-classes">pseudo-classes</h2>
-        <p>Ce groupe de sélecteurs inclut les pseudo-classes, qui ciblent des éléments dans un état donné. Par exemple, la pseudo-classe :hover sélectionne un élément seulement s'il est survolé par le pointeur de la souris :</p>
-        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
-            <code>    
-                <span class="text-primary">a:hover </span> <span class="text-warning">{ }</span><br> 
-            </code>
-        </div>
-        <p>Ce groupe inclut aussi les pseudo-éléments, qui ciblent une certaine partie d'un élément plutôt que l'élément tout entier. Par exemple, ::first-line sélectionne la première ligne d'un texte contenu dans un élément (un p dans l'exemple ci-dessous), comme si la première ligne du texte mis en forme était placée entre span et qu'après coup on appliquait un style sur cet élément.</p>
-        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
-            <code>    
-                <span class="text-primary">p::first-line </span> <span class="text-warning">{ }</span><br> 
-            </code>
-        </div>
+            <h2 class="display-6 text-uppercase text-warning ms-5 my-5" id="flexbox">Flexbox</h2>
 
-        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="combinateurs">combinateurs</h2>
-        <p>Dans la dernière catégorie, on combine les sélecteurs pour cibler plus finement les éléments dans nos documents. L'exemple suivant sélectionne les paragraphes enfants directs de article grâce au combinateur enfant (>) :</p>
-        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
-            <code>    
-                <span class="text-primary">article > p </span> <span class="text-warning">{ }</span><br> 
-            </code>
-        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellat nulla repellendus numquam dolorum, eveniet sint amet possimus debitis sequi cum, aspernatur dolores? Laborum mollitia nisi voluptas ipsum ea quia!
+        Omnis perferendis, quos quia voluptatum vel rem similique, saepe rerum autem dolorum totam et quasi? Error quos aut perferendis neque vitae corrupti nesciunt. Quaerat sit laboriosam ea molestiae dolores magnam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ullam commodi maiores optio adipisci excepturi. Architecto temporibus vel sunt nesciunt qui, quae tenetur, esse quis aperiam, at quia. Adipisci, quaerat.
+        Omnis, quisquam corporis voluptatum dolor fuga voluptatibus laborum debitis perferendis obcaecati modi aliquid adipisci nemo, consectetur dicta maxime soluta ullam est! Vitae nobis perferendis accusantium commodi suscipit excepturi facilis omnis?</p>
 
-        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="cascade">cascade, spécificité et héritage</h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="boites">modèle de boîte</h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="bordures">arrière-plans et bordures</h2>
-        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="taille-elements">taille des éléments</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, ipsum beatae consectetur eum ex eos sequi repudiandae ut necessitatibus distinctio eius expedita soluta, odio ducimus iusto praesentium, cum aliquid magnam!
+        Officia, molestias debitis eius dolorum et quam similique, enim aut, doloremque quo dolorem odit. Incidunt cum reiciendis voluptate laudantium quis fugit iusto voluptates tenetur. Fugiat soluta eligendi pariatur dicta corrupti?
+        Fuga, quia! Vitae expedita vel excepturi delectus. Corporis reprehenderit temporibus sint, ullam maiores, labore, fugit doloremque aperiam cumque culpa distinctio. Nesciunt non adipisci voluptatem, quis obcaecati reprehenderit alias. Totam, iusto.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quia sapiente atque, corporis voluptate omnis, perspiciatis quibusdam, asperiores ea a cupiditate quo vel explicabo odit consequatur assumenda itaque at ab.
+        Commodi eligendi voluptatem id quis libero porro nemo facere laudantium similique, fugit labore. Neque, veritatis voluptatibus consequuntur quaerat dolor mollitia, delectus est minima deserunt ad ipsa vero accusamus repudiandae molestiae!
+        Quos minus vel, velit maxime ab laborum sequi fugiat voluptatem deleniti repellat tempore quod, odit impedit quia labore ipsam. Maxime et doloremque explicabo nesciunt, id voluptate natus accusantium accusamus aliquam?
+        Necessitatibus vitae vero modi, ratione illo harum provident voluptates cum facilis, et rerum tempora voluptatum adipisci! Nam, amet cum dicta quaerat voluptates nesciunt quo perspiciatis mollitia, repudiandae nobis eligendi pariatur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure id sit nihil ullam explicabo iste dolorum amet. Similique, earum voluptatibus. Voluptates harum perspiciatis aliquid necessitatibus aut cum. Accusamus, minus dicta?</p>
+        
+        <h2 class="display-6 text-uppercase text-warning ms-5 my-5" id="grid-content">CSS Grid</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellat nulla repellendus numquam dolorum, eveniet sint amet possimus debitis sequi cum, aspernatur dolores? Laborum mollitia nisi voluptas ipsum ea quia!
+        Omnis perferendis, quos quia voluptatum vel rem similique, saepe rerum autem dolorum totam et quasi? Error quos aut perferendis neque vitae corrupti nesciunt. Quaerat sit laboriosam ea molestiae dolores magnam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ullam commodi maiores optio adipisci excepturi. Architecto temporibus vel sunt nesciunt qui, quae tenetur, esse quis aperiam, at quia. Adipisci, quaerat.
+        Omnis, quisquam corporis voluptatum dolor fuga voluptatibus laborum debitis perferendis obcaecati modi aliquid adipisci nemo, consectetur dicta maxime soluta ullam est! Vitae nobis perferendis accusantium commodi suscipit excepturi facilis omnis?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, ipsum beatae consectetur eum ex eos sequi repudiandae ut necessitatibus distinctio eius expedita soluta, odio ducimus iusto praesentium, cum aliquid magnam!
+        Officia, molestias debitis eius dolorum et quam similique, enim aut, doloremque quo dolorem odit. Incidunt cum reiciendis voluptate laudantium quis fugit iusto voluptates tenetur. Fugiat soluta eligendi pariatur dicta corrupti?
+        Fuga, quia! Vitae expedita vel excepturi delectus. Corporis reprehenderit temporibus sint, ullam maiores, labore, fugit doloremque aperiam cumque culpa distinctio. Nesciunt non adipisci voluptatem, quis obcaecati reprehenderit alias. Totam, iusto.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quia sapiente atque, corporis voluptate omnis, perspiciatis quibusdam, asperiores ea a cupiditate quo vel explicabo odit consequatur assumenda itaque at ab.
+        Commodi eligendi voluptatem id quis libero porro nemo facere laudantium similique, fugit labore. Neque, veritatis voluptatibus consequuntur quaerat dolor mollitia, delectus est minima deserunt ad ipsa vero accusamus repudiandae molestiae!
+        Quos minus vel, velit maxime ab laborum sequi fugiat voluptatem deleniti repellat tempore quod, odit impedit quia labore ipsam. Maxime et doloremque explicabo nesciunt, id voluptate natus accusantium accusamus aliquam?
+        Necessitatibus vitae vero modi, ratione illo harum provident voluptates cum facilis, et rerum tempora voluptatum adipisci! Nam, amet cum dicta quaerat voluptates nesciunt quo perspiciatis mollitia, repudiandae nobis eligendi pariatur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure id sit nihil ullam explicabo iste dolorum amet. Similique, earum voluptatibus. Voluptates harum perspiciatis aliquid necessitatibus aut cum. Accusamus, minus dicta?</p>
+        
+        <h2 class="display-6 text-uppercase text-warning ms-5 my-5" id="animations">Les animations en CSS</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellat nulla repellendus numquam dolorum, eveniet sint amet possimus debitis sequi cum, aspernatur dolores? Laborum mollitia nisi voluptas ipsum ea quia!
+        Omnis perferendis, quos quia voluptatum vel rem similique, saepe rerum autem dolorum totam et quasi? Error quos aut perferendis neque vitae corrupti nesciunt. Quaerat sit laboriosam ea molestiae dolores magnam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ullam commodi maiores optio adipisci excepturi. Architecto temporibus vel sunt nesciunt qui, quae tenetur, esse quis aperiam, at quia. Adipisci, quaerat.
+        Omnis, quisquam corporis voluptatum dolor fuga voluptatibus laborum debitis perferendis obcaecati modi aliquid adipisci nemo, consectetur dicta maxime soluta ullam est! Vitae nobis perferendis accusantium commodi suscipit excepturi facilis omnis?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, ipsum beatae consectetur eum ex eos sequi repudiandae ut necessitatibus distinctio eius expedita soluta, odio ducimus iusto praesentium, cum aliquid magnam!
+        Officia, molestias debitis eius dolorum et quam similique, enim aut, doloremque quo dolorem odit. Incidunt cum reiciendis voluptate laudantium quis fugit iusto voluptates tenetur. Fugiat soluta eligendi pariatur dicta corrupti?
+        Fuga, quia! Vitae expedita vel excepturi delectus. Corporis reprehenderit temporibus sint, ullam maiores, labore, fugit doloremque aperiam cumque culpa distinctio. Nesciunt non adipisci voluptatem, quis obcaecati reprehenderit alias. Totam, iusto.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quia sapiente atque, corporis voluptate omnis, perspiciatis quibusdam, asperiores ea a cupiditate quo vel explicabo odit consequatur assumenda itaque at ab.
+        Commodi eligendi voluptatem id quis libero porro nemo facere laudantium similique, fugit labore. Neque, veritatis voluptatibus consequuntur quaerat dolor mollitia, delectus est minima deserunt ad ipsa vero accusamus repudiandae molestiae!
+        Quos minus vel, velit maxime ab laborum sequi fugiat voluptatem deleniti repellat tempore quod, odit impedit quia labore ipsam. Maxime et doloremque explicabo nesciunt, id voluptate natus accusantium accusamus aliquam?
+        Necessitatibus vitae vero modi, ratione illo harum provident voluptates cum facilis, et rerum tempora voluptatum adipisci! Nam, amet cum dicta quaerat voluptates nesciunt quo perspiciatis mollitia, repudiandae nobis eligendi pariatur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure id sit nihil ullam explicabo iste dolorum amet. Similique, earum voluptatibus. Voluptates harum perspiciatis aliquid necessitatibus aut cum. Accusamus, minus dicta?</p>
+
+        <h2 class="display-6 text-uppercase text-warning ms-5 my-5" id="framework">Frameworks CSS</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellat nulla repellendus numquam dolorum, eveniet sint amet possimus debitis sequi cum, aspernatur dolores? Laborum mollitia nisi voluptas ipsum ea quia!
+        Omnis perferendis, quos quia voluptatum vel rem similique, saepe rerum autem dolorum totam et quasi? Error quos aut perferendis neque vitae corrupti nesciunt. Quaerat sit laboriosam ea molestiae dolores magnam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ullam commodi maiores optio adipisci excepturi. Architecto temporibus vel sunt nesciunt qui, quae tenetur, esse quis aperiam, at quia. Adipisci, quaerat.
+        Omnis, quisquam corporis voluptatum dolor fuga voluptatibus laborum debitis perferendis obcaecati modi aliquid adipisci nemo, consectetur dicta maxime soluta ullam est! Vitae nobis perferendis accusantium commodi suscipit excepturi facilis omnis?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, ipsum beatae consectetur eum ex eos sequi repudiandae ut necessitatibus distinctio eius expedita soluta, odio ducimus iusto praesentium, cum aliquid magnam!
+        Officia, molestias debitis eius dolorum et quam similique, enim aut, doloremque quo dolorem odit. Incidunt cum reiciendis voluptate laudantium quis fugit iusto voluptates tenetur. Fugiat soluta eligendi pariatur dicta corrupti?
+        Fuga, quia! Vitae expedita vel excepturi delectus. Corporis reprehenderit temporibus sint, ullam maiores, labore, fugit doloremque aperiam cumque culpa distinctio. Nesciunt non adipisci voluptatem, quis obcaecati reprehenderit alias. Totam, iusto.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quia sapiente atque, corporis voluptate omnis, perspiciatis quibusdam, asperiores ea a cupiditate quo vel explicabo odit consequatur assumenda itaque at ab.
+        Commodi eligendi voluptatem id quis libero porro nemo facere laudantium similique, fugit labore. Neque, veritatis voluptatibus consequuntur quaerat dolor mollitia, delectus est minima deserunt ad ipsa vero accusamus repudiandae molestiae!
+        Quos minus vel, velit maxime ab laborum sequi fugiat voluptatem deleniti repellat tempore quod, odit impedit quia labore ipsam. Maxime et doloremque explicabo nesciunt, id voluptate natus accusantium accusamus aliquam?
+        Necessitatibus vitae vero modi, ratione illo harum provident voluptates cum facilis, et rerum tempora voluptatum adipisci! Nam, amet cum dicta quaerat voluptates nesciunt quo perspiciatis mollitia, repudiandae nobis eligendi pariatur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure id sit nihil ullam explicabo iste dolorum amet. Similique, earum voluptatibus. Voluptates harum perspiciatis aliquid necessitatibus aut cum. Accusamus, minus dicta?</p>
     </section>
 </body> 
 </html>

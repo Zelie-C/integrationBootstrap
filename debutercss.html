@@ -113,5 +113,207 @@
             Facilis corrupti porro non placeat incidunt laborum cum aspernatur! Deleniti provident soluta esse laboriosam illum saepe iste! Amet est sapiente exercitationem commodi voluptates earum? Iure molestiae temporibus sequi est eaque?
             Nisi, dolor? Harum dolorum nemo exercitationem consequuntur nisi sequi suscipit quaerat odit, a ad illum repellendus quo quidem vitae at distinctio id quos magni labore! Earum accusamus eaque qui cumque!</p>
     </section>
+    <section class="container mt-2">
+        <h1 class="display-5 fw-bold text-uppercase text-secondary ms-3 my-5">Les blocs de construction CSS</h1>
+        <div class="button-group m-5">
+            <a href="#selecteurs" class="btn btn-outline-dark mb-2">les sélecteurs</a>
+            <a href="debutercss.html#pseudo-classes" class="btn btn-outline-dark mb-2">pseudo-classes</a>
+            <a href="debutercss.html#combinateurs" class="btn btn-outline-dark mb-2">combinateurs</a>
+            <a href="debutercss.html#cascade" class="btn btn-outline-dark mb-2">cascade, spécificité et héritage</a>
+            <a href="debutercss.html#boites" class="btn btn-outline-dark mb-2">modèle de boîte</a>
+            <a href="debutercss.html#bordures" class="btn btn-outline-dark mb-2">arrière-plans et bordures</a>
+            <a href="debutercss.html#taille-elements" class="btn btn-outline-dark mb-2">taille des éléments</a>
+            <a href="debutercss.html#forme-texte" class="btn btn-outline-dark mb-2">Mise en forme du texte</a>
+            <a href="debutercss.html#pseudo-classes" class="btn btn-outline-dark mb-2">Dispositions</a>
+        </div>
+    </section>
+    <section class="container mt-2">
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="#selecteurs">sélecteurs</h2>
+        <p>Dans CSS, les sélecteurs sont utilisés pour cibler les éléments HTML à mettre en forme dans nos pages web. CSS propose une grande diversité de sélecteurs, offrant ainsi une précision très fine dans la façon de cibler les éléments. Dans cette section, nous explorerons en détails le fonctionnement de ces différents types.</p>
+        <p>Un sélecteur est une expression qui indique au navigateur à quelle entité HTML s'applique la règle CSS correspondante. Le ou les éléments ciblés par le sélecteur sont le sujet de ce sélecteur.</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">h1 </span> <span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span><span class="text-dark">: red;</span> <br>
+                <span class="text-danger ms-4">font-size</span><span class="text-dark">: 5em;</span> <br>        
+                <span class="text-warning">}</span>    
+            </code>
+        </div>
+        <p>En CSS, les sélecteurs sont définis dans la spécification CSS Selectors ; comme tout le reste de CSS, le bon fonctionnement des sélecteurs dépend de la prise en charge par les navigateurs. La plupart des sélecteurs que vous rencontrerez sont définis dans la spécification de niveau 3 pour les sélecteurs, une spécification mature, aussi la prise en charge par les navigateurs est excellente.</p>
+        <p>Quand un groupe de déclarations CSS s'applique à plusieurs éléments distincts, on peut combiner les sélecteurs individuels en une liste. Par exemple, si j'ai le même CSS pour un h1 et pour une classe .special, je pourrais écrire deux règles :</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">h1 </span><span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>        
+                <span class="text-warning">}</span>
+                <br>
+                <br>
+                <span class="text-primary">.special </span><span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>
+                <span class="text-warning">}</span>
+            </code>
+        </div>
+        <p>ou bien une seule règle en combinant les sélecteurs, séparés par une virgule :</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">h1, .special </span> <span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>      
+                <span class="text-warning">}</span>    
+            </code>
+        </div>
+        <h3 class="fs-4 mt-4">Selecteurs par type, classe et ID</h3>
+        <p>Ce groupe inclut les sélecteurs ciblant les élements HTML tels que h1 :</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+        <code>    
+            <span class="text-primary">h1 </span> <span class="text-warning">{ }</span><br> 
+        </code>
+        </div>
+        <p>On trouve aussi les sélecteurs ciblant une classe :</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">.box </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+        <p>ou un ID :</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">#unique </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+        <h3 class="fs-4 mt-4">Selecteur d'attributs</h3>
+        <p>Ce groupe de sélecteurs offre différents mécanismes pour cibler des éléments en fonction de la présence d'un attribut donné pour un élément donné :</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">a[title] </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+        <p>Ou même de baser la sélection sur la présence d'un attribut avec une valeur bien précise :</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">a[href="https://example.com"] </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="pseudo-classes">pseudo-classes</h2>
+        <p>Ce groupe de sélecteurs inclut les pseudo-classes, qui ciblent des éléments dans un état donné. Par exemple, la pseudo-classe :hover sélectionne un élément seulement s'il est survolé par le pointeur de la souris :</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">a:hover </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+        <p>Ce groupe inclut aussi les pseudo-éléments, qui ciblent une certaine partie d'un élément plutôt que l'élément tout entier. Par exemple, ::first-line sélectionne la première ligne d'un texte contenu dans un élément (un p dans l'exemple ci-dessous), comme si la première ligne du texte mis en forme était placée entre span et qu'après coup on appliquait un style sur cet élément.</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">p::first-line </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="#combinateurs">combinateurs</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A repellat nulla repellendus numquam dolorum, eveniet sint amet possimus debitis sequi cum, aspernatur dolores? Laborum mollitia nisi voluptas ipsum ea quia!
+        Omnis perferendis, quos quia voluptatum vel rem similique, saepe rerum autem dolorum totam et quasi? Error quos aut perferendis neque vitae corrupti nesciunt. Quaerat sit laboriosam ea molestiae dolores magnam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime repellat laborum eius non consequatur impedit dicta ea animi. Veniam error debitis velit dolorum atque corrupti non, nesciunt aut officia nostrum?</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">h1 </span> <span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span><span class="text-dark">: red;</span> <br>
+                <span class="text-danger ms-4">font-size</span><span class="text-dark">: 5em;</span> <br>        
+                <span class="text-warning">}</span>    
+            </code>
+        </div>
+        <p>En CSS, les sélecteurs sont définis dans la spécification CSS Selectors ; comme tout le reste de CSS, le bon fonctionnement des sélecteurs dépend de la prise en charge par les navigateurs. La plupart des sélecteurs que vous rencontrerez sont définis dans la spécification de niveau 3 pour les sélecteurs, une spécification mature, aussi la prise en charge par les navigateurs est excellente.</p>
+        <p>Quand un groupe de déclarations CSS s'applique à plusieurs éléments distincts, on peut combiner les sélecteurs individuels en une liste. Par exemple, si j'ai le même CSS pour un h1 et pour une classe .special, je pourrais écrire deux règles :</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">h1 </span><span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>        
+                <span class="text-warning">}</span>
+                <br>
+                <br>
+                <span class="text-primary">.special </span><span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>
+                <span class="text-warning">}</span>
+            </code>
+        </div>
+        <p>ou bien une seule règle en combinant les sélecteurs, séparés par une virgule :</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">h1, .special </span> <span class="text-warning">{</span><br>
+                <span class="text-danger ms-4">color</span><span class="text-dark">: blue;</span> <br>      
+                <span class="text-warning">}</span>    
+            </code>
+        </div>
+        <h3 class="fs-4 mt-4">Combinateur descendant</h3>
+        <p>Le combinateur descendant— en général représenté par un seul espace (" ") — combine deux sélecteurs de sorte que les éléments choisis par le second sélecteur sont sélectionnés s'ils ont un élément ancêtre (parent, parent de parent, parent de parent de parent, etc...) qui correspond au premier sélecteur. Les sélecteurs qui utilisent un combinateur descendant sont appelés sélecteurs descendants.</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+        <code>    
+            <span class="text-primary">ul li</span> <span class="text-warning">{ }</span><br> 
+        </code>
+        </div>
+        
+        <h3 class="fs-4 mt-4">Combinateur enfant</h3>
+        <p>Le combinateur enfant (>) est placé entre deux sélecteurs CSS. Il correspond uniquement aux éléments correspondant au second sélecteur qui sont les enfants directs des éléments correspondants au premier. Les éléments descendants plus bas dans la hiérarchie ne correspondent pas. Par exemple, pour sélectionner uniquement les éléments &lt;p&gt; qui sont des enfants directs des éléments &lt;article&gt;:</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">article > p </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+        
+        <h3 class="fs-4 mt-4">Combinateur frère adjacents</h3>
+        <p>Le sélecteur de frère adjacent (+) est utilisé pour sélectionner quelque chose s'il est juste à côté d'un autre élément au même niveau de la hiérarchie. Par exemple, pour sélectionner tous les éléments &lt;img&gt; qui viennent juste après les éléments &lt;p&gt;:</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">p + img </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+        
+        <h3 class="fs-4 mt-4">Combinateur général de frères</h3>
+        <p>Si vous souhaitez sélectionner les frères d'un élément même s'ils ne sont pas directement adjacents, vous pouvez utiliser le combinateur général de frères (~). Pour sélectionner tous les éléments &lt;img&gt; qui viennent n'importe où après les éléments &lt;p&gt;, nous ferions ceci:</p>
+        <div class="w-25 bg-secondary bg-opacity-10 border border-secondary rounded-3 p-2 ms-4 mb-3">
+            <code>    
+                <span class="text-primary">p ~ img </span> <span class="text-warning">{ }</span><br> 
+            </code>
+        </div>
+
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="cascade">cascade, spécificité et héritage</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quo dicta iusto illum quas quibusdam ipsam laboriosam quod aut. Nemo aliquam consequuntur ad quis, nam voluptatum voluptatibus ex velit excepturi?
+        Autem nesciunt animi magni dolorum neque ratione dolore nihil ab architecto at accusantium perferendis soluta vero, iste, placeat obcaecati quidem, porro voluptas rerum dolor et earum. Mollitia saepe cupiditate nam!
+        Sequi aliquid animi ea explicabo est amet autem, eaque iusto similique corporis, ipsum dolore magni eius nisi quo distinctio odio voluptate facilis recusandae dolor molestias? Ea facilis aliquam deserunt nam!
+        Expedita, ut earum! Itaque, voluptate commodi qui temporibus, nesciunt enim optio vero, error quisquam rem corrupti eaque suscipit? Quam sint reiciendis atque perferendis. Officia, molestiae! Mollitia doloribus nam libero blanditiis.
+        Consequatur debitis voluptas illum molestiae ea sunt hic! Modi saepe fugit soluta quibusdam ducimus laborum alias, veritatis, molestias magni atque minus aut fuga pariatur nisi earum facere illo? Nostrum, dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laudantium cumque quibusdam, eos officiis quidem nobis saepe ex, eius fugit repellat, quis nulla tempora minus porro at omnis fuga qui?
+        Iure possimus nulla porro voluptate recusandae ducimus odio asperiores tempore nesciunt. Tempore eveniet quam, possimus minus incidunt sint modi nisi temporibus quibusdam odit adipisci neque, facere explicabo molestiae laboriosam deserunt.
+        Esse, quos optio. Quia rem, vel eum sequi iure excepturi distinctio similique at enim tenetur omnis a assumenda nobis, nam error aliquam odio dolore ratione sit voluptates consequatur nulla officiis.
+        Alias consequatur minima, molestiae enim magnam eligendi et nihil delectus ex, ullam omnis? Culpa repellendus facilis fuga dolor. Consectetur culpa officia voluptate commodi vitae ea nulla delectus repellat vero adipisci.
+        Praesentium consequuntur quasi sit eius beatae atque, ea magni vel adipisci nihil debitis! Obcaecati deserunt quidem similique reprehenderit perferendis provident eaque minus. Delectus ex tenetur corporis assumenda porro harum eaque.</p>
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="boites">modèle de boîte</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quo dicta iusto illum quas quibusdam ipsam laboriosam quod aut. Nemo aliquam consequuntur ad quis, nam voluptatum voluptatibus ex velit excepturi?
+            Autem nesciunt animi magni dolorum neque ratione dolore nihil ab architecto at accusantium perferendis soluta vero, iste, placeat obcaecati quidem, porro voluptas rerum dolor et earum. Mollitia saepe cupiditate nam!
+            Sequi aliquid animi ea explicabo est amet autem, eaque iusto similique corporis, ipsum dolore magni eius nisi quo distinctio odio voluptate facilis recusandae dolor molestias? Ea facilis aliquam deserunt nam!
+            Expedita, ut earum! Itaque, voluptate commodi qui temporibus, nesciunt enim optio vero, error quisquam rem corrupti eaque suscipit? Quam sint reiciendis atque perferendis. Officia, molestiae! Mollitia doloribus nam libero blanditiis.
+            Consequatur debitis voluptas illum molestiae ea sunt hic! Modi saepe fugit soluta quibusdam ducimus laborum alias, veritatis, molestias magni atque minus aut fuga pariatur nisi earum facere illo? Nostrum, dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laudantium cumque quibusdam, eos officiis quidem nobis saepe ex, eius fugit repellat, quis nulla tempora minus porro at omnis fuga qui?
+            Iure possimus nulla porro voluptate recusandae ducimus odio asperiores tempore nesciunt. Tempore eveniet quam, possimus minus incidunt sint modi nisi temporibus quibusdam odit adipisci neque, facere explicabo molestiae laboriosam deserunt.
+            Esse, quos optio. Quia rem, vel eum sequi iure excepturi distinctio similique at enim tenetur omnis a assumenda nobis, nam error aliquam odio dolore ratione sit voluptates consequatur nulla officiis.
+            Alias consequatur minima, molestiae enim magnam eligendi et nihil delectus ex, ullam omnis? Culpa repellendus facilis fuga dolor. Consectetur culpa officia voluptate commodi vitae ea nulla delectus repellat vero adipisci.
+            Praesentium consequuntur quasi sit eius beatae atque, ea magni vel adipisci nihil debitis! Obcaecati deserunt quidem similique reprehenderit perferendis provident eaque minus. Delectus ex tenetur corporis assumenda porro harum eaque.</p>
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="bordures">arrière-plans et bordures</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quo dicta iusto illum quas quibusdam ipsam laboriosam quod aut. Nemo aliquam consequuntur ad quis, nam voluptatum voluptatibus ex velit excepturi?
+            Autem nesciunt animi magni dolorum neque ratione dolore nihil ab architecto at accusantium perferendis soluta vero, iste, placeat obcaecati quidem, porro voluptas rerum dolor et earum. Mollitia saepe cupiditate nam!
+            Sequi aliquid animi ea explicabo est amet autem, eaque iusto similique corporis, ipsum dolore magni eius nisi quo distinctio odio voluptate facilis recusandae dolor molestias? Ea facilis aliquam deserunt nam!
+            Expedita, ut earum! Itaque, voluptate commodi qui temporibus, nesciunt enim optio vero, error quisquam rem corrupti eaque suscipit? Quam sint reiciendis atque perferendis. Officia, molestiae! Mollitia doloribus nam libero blanditiis.
+            Consequatur debitis voluptas illum molestiae ea sunt hic! Modi saepe fugit soluta quibusdam ducimus laborum alias, veritatis, molestias magni atque minus aut fuga pariatur nisi earum facere illo? Nostrum, dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laudantium cumque quibusdam, eos officiis quidem nobis saepe ex, eius fugit repellat, quis nulla tempora minus porro at omnis fuga qui?
+            Iure possimus nulla porro voluptate recusandae ducimus odio asperiores tempore nesciunt. Tempore eveniet quam, possimus minus incidunt sint modi nisi temporibus quibusdam odit adipisci neque, facere explicabo molestiae laboriosam deserunt.
+            Esse, quos optio. Quia rem, vel eum sequi iure excepturi distinctio similique at enim tenetur omnis a assumenda nobis, nam error aliquam odio dolore ratione sit voluptates consequatur nulla officiis.
+            Alias consequatur minima, molestiae enim magnam eligendi et nihil delectus ex, ullam omnis? Culpa repellendus facilis fuga dolor. Consectetur culpa officia voluptate commodi vitae ea nulla delectus repellat vero adipisci.
+            Praesentium consequuntur quasi sit eius beatae atque, ea magni vel adipisci nihil debitis! Obcaecati deserunt quidem similique reprehenderit perferendis provident eaque minus. Delectus ex tenetur corporis assumenda porro harum eaque.</p>
+        <h2 class="display-6 text-uppercase text-primary ms-5 my-5" id="taille-elements">taille des éléments</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quo dicta iusto illum quas quibusdam ipsam laboriosam quod aut. Nemo aliquam consequuntur ad quis, nam voluptatum voluptatibus ex velit excepturi?
+            Autem nesciunt animi magni dolorum neque ratione dolore nihil ab architecto at accusantium perferendis soluta vero, iste, placeat obcaecati quidem, porro voluptas rerum dolor et earum. Mollitia saepe cupiditate nam!
+            Sequi aliquid animi ea explicabo est amet autem, eaque iusto similique corporis, ipsum dolore magni eius nisi quo distinctio odio voluptate facilis recusandae dolor molestias? Ea facilis aliquam deserunt nam!
+            Expedita, ut earum! Itaque, voluptate commodi qui temporibus, nesciunt enim optio vero, error quisquam rem corrupti eaque suscipit? Quam sint reiciendis atque perferendis. Officia, molestiae! Mollitia doloribus nam libero blanditiis.
+            Consequatur debitis voluptas illum molestiae ea sunt hic! Modi saepe fugit soluta quibusdam ducimus laborum alias, veritatis, molestias magni atque minus aut fuga pariatur nisi earum facere illo? Nostrum, dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laudantium cumque quibusdam, eos officiis quidem nobis saepe ex, eius fugit repellat, quis nulla tempora minus porro at omnis fuga qui?
+            Iure possimus nulla porro voluptate recusandae ducimus odio asperiores tempore nesciunt. Tempore eveniet quam, possimus minus incidunt sint modi nisi temporibus quibusdam odit adipisci neque, facere explicabo molestiae laboriosam deserunt.
+            Esse, quos optio. Quia rem, vel eum sequi iure excepturi distinctio similique at enim tenetur omnis a assumenda nobis, nam error aliquam odio dolore ratione sit voluptates consequatur nulla officiis.
+            Alias consequatur minima, molestiae enim magnam eligendi et nihil delectus ex, ullam omnis? Culpa repellendus facilis fuga dolor. Consectetur culpa officia voluptate commodi vitae ea nulla delectus repellat vero adipisci.
+            Praesentium consequuntur quasi sit eius beatae atque, ea magni vel adipisci nihil debitis! Obcaecati deserunt quidem similique reprehenderit perferendis provident eaque minus. Delectus ex tenetur corporis assumenda porro harum eaque.</p>
+    </section>
 </body>
 </html>
